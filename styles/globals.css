@@ -1,0 +1,242 @@
+/* google font */
+@import url("http://fonts.googleapis.com/css?family=Quicksand:wght@200;400;800&family=VT323&display=swap");
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: #13acf373;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0296dabf;
+}
+
+/* general resets */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: Quicksand, sans-serif;
+  font-size: 1.25em;
+  width: 100%;
+  cursor: default;
+  position: relative;
+  margin: 0 auto;
+  background: lightskyblue;
+}
+p,
+a,
+ul,
+li,
+div {
+  text-decoration: none;
+  list-style-type: none;
+}
+a {
+  color: #000;
+}
+div#content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+nav {
+  display: block;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  border-bottom: 1px solid #a0a0a07c;
+  padding: 20px;
+  background: #13acf3dc;
+}
+nav a {
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.2s linear;
+}
+nav a:hover {
+  font-weight: bold;
+  background: #ffffffbd;
+}
+nav a.active {
+  font-weight: bold;
+}
+.homepage {
+  padding: 0 10%;
+  padding-top: 10px;
+  text-align: center;
+}
+.homepage img {
+  max-width: 100%;
+}
+.header h2 {
+  font-size: 4em;
+}
+.header h3 {
+  font-size: 3em;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.btn {
+  display: inline-block;
+  background: #13acf3be;
+  padding: 10px 16px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-weight: 500;
+  font-weight: bold;
+  transition: all 0.2s linear;
+}
+.btn:hover {
+  background: #ffffffe5;
+}
+
+.projects {
+  padding-top: 40px;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  grid-gap: 10px;
+}
+.project a.btn {
+  padding: auto 5%;
+  transition: all 0.2s linear;
+  background: #ffffffd5;
+}
+.project a:hover {
+  background: #66cfffbe;
+}
+.project img,
+.project span {
+  max-height: 250px;
+  border-radius: 5px;
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  object-fit: cover;
+  box-sizing: content-box;
+  padding-bottom: 20px;
+  display: block;
+  font-weight: bold;
+}
+.project .details {
+  padding-bottom: 10px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  text-align: center;
+  padding: 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.about .about-me {
+  text-align: left;
+  line-height: 1.5;
+}
+.about .about-me ul li {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+.about .me {
+  margin: 20px auto auto;
+  max-width: 400px;
+}
+.about .me img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  display: block;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  font-size: 10px;
+  width: 100%;
+  padding: 5px 0;
+  background: #13acf3e1;
+}
+footer a {
+  color: #111;
+  font-weight: bold;
+}
+
+/* responsive - mobile first */
+/* small mobile */
+@media (min-width: 320px) {
+  body {
+    background: #494949dc;
+  }
+}
+/* tablet */
+@media (min-width: 768px) {
+  body {
+    font-size: 1.75em;
+    background: radial-gradient(at center, #6fd5d0d9 0%, #2875b4d9 100%);
+  }
+
+  nav {
+    text-align: left;
+    padding: 20px calc(10% - 20px);
+  }
+
+  .homepage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    text-align: left;
+  }
+
+  .projects {
+    grid-template-columns: 1fr 1fr;
+  }
+  .project {
+    text-align: center;
+  }
+  .project a.btn {
+    width: 360px;
+  }
+  .project img {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+
+  .about .me {
+    margin: auto;
+  }
+
+  footer {
+    font-size: 12.5px;
+  }
+}
+/* desktop */
+@media (min-width: 1200px) {
+  body {
+    font-size: 1.75em;
+    background: radial-gradient(at top left, #bee7b6d9 0%, #36a166d9 100%);
+  }
+
+  .projects {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 5%;
+  }
+  .project {
+    max-height: 300px;
+    margin-bottom: 100px;
+  }
+}
