@@ -106,6 +106,7 @@ nav a.active {
   display: grid;
   justify-items: center;
   grid-gap: 10px;
+  margin-bottom: 100px;
 }
 .project a.btn {
   padding: auto 5%;
