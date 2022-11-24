@@ -17,19 +17,19 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: Quicksand, sans-serif;
   box-sizing: border-box;
 }
 html {
   font-size: 62.5%;
 }
 body {
-  font-family: Quicksand, sans-serif;
-  font-size: 1.25em;
+  font-size: 12.5px;
   width: 100%;
   cursor: default;
   position: relative;
   margin: 0 auto;
-  background: lightskyblue;
+  background: #9bd9ffb9;
 }
 p,
 a,
@@ -56,7 +56,9 @@ nav {
   text-align: center;
   border-bottom: 1px solid #a0a0a07c;
   padding: 20px;
-  background: #13acf3dc;
+  background: #38c0ff65;
+  backdrop-filter: saturate(180%) blur(5px);
+  z-index: 1;
 }
 nav a {
   padding: 10px 20px;
@@ -92,9 +94,9 @@ nav a.active {
   padding: 10px 16px;
   border-radius: 10px;
   margin-top: 20px;
-  font-weight: 500;
   font-weight: bold;
   transition: all 0.2s linear;
+  cursor: pointer;
 }
 .btn:hover {
   background: #ffffffe5;
@@ -116,8 +118,15 @@ nav a.active {
 .project a:hover {
   background: #66cfffbe;
 }
+.project a img {
+  filter: blur(2.5px);
+  transition: filter 0.1s linear;
+}
+.project a:hover img {
+  filter: blur(0);
+}
 .project img,
-.project span {
+.project h4 {
   max-height: 250px;
   border-radius: 5px;
   width: 300px;
@@ -160,6 +169,53 @@ nav a.active {
   height: 100%;
 }
 
+.project-details {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.project-details .btns {
+  text-align: start;
+  max-width: 95%;
+  margin: 20px auto;
+}
+.project-details .btn {
+  font-size: 10px;
+  margin: 5px auto;
+}
+.project-details .btns div div .btn {
+  color: #fff;
+  background: #5393fcd8;
+}
+.project-details .btns div div .btn:hover {
+  filter: brightness(110%);
+}
+.project-details .btns div .btn:first-child {
+  margin-right: 10px;
+}
+.project-details .btn.visit {
+  color: #fff;
+  background: #3aa141;
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  transition: all 0.2s linear;
+}
+.project-details .btn.visit:hover {
+  filter: brightness(110%);
+}
+.project-details p {
+  max-width: 95%;
+  margin: 20px auto;
+  text-align: start;
+}
+.project-details .iframe {
+  border-radius: 10px;
+  border: 1px solid #32b4ffcb;
+  margin-bottom: 100px;
+}
+
 footer {
   display: block;
   text-align: center;
@@ -168,7 +224,8 @@ footer {
   font-size: 10px;
   width: 100%;
   padding: 5px 0;
-  background: #13acf3e1;
+  background: #38c0ff65;
+  backdrop-filter: saturate(180%) blur(10px);
 }
 footer a {
   color: #111;
@@ -176,17 +233,10 @@ footer a {
 }
 
 /* responsive - mobile first */
-/* small mobile */
-@media (min-width: 320px) {
-  body {
-    background: #494949dc;
-  }
-}
 /* tablet */
 @media (min-width: 768px) {
   body {
-    font-size: 1.75em;
-    background: radial-gradient(at center, #6fd5d0d9 0%, #2875b4d9 100%);
+    font-size: 17.5px;
   }
 
   nav {
@@ -221,17 +271,16 @@ footer a {
     margin: auto;
   }
 
+  .project-details .btn {
+    font-size: 15px;
+  }
+
   footer {
     font-size: 12.5px;
   }
 }
 /* desktop */
 @media (min-width: 1200px) {
-  body {
-    font-size: 1.75em;
-    background: radial-gradient(at top left, #bee7b6d9 0%, #36a166d9 100%);
-  }
-
   .projects {
     grid-template-columns: 1fr 1fr 1fr;
     padding: 5%;
