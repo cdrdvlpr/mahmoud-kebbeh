@@ -118,13 +118,6 @@ nav a.active {
 .project a:hover {
   background: #66cfffbe;
 }
-.project a img {
-  filter: blur(2.5px);
-  transition: filter 0.1s linear;
-}
-.project a:hover img {
-  filter: blur(0);
-}
 .project img,
 .project h4 {
   max-height: 250px;

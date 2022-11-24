@@ -1,23 +1,15 @@
-import axios from "axios";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 
 export default function Home() {
-  useEffect(() => {
-    const res = async () => {
-      axios.get();
-    };
-    console.log();
-  }, []);
-
   return (
     <>
       <Head>
         <title>Mahmoud Kebbeh | About</title>
         <meta name="description" content="Mahmoud Kebbeh | NextJS Portfolio" />
       </Head>
+
       <div className="about">
         <div className="about-me">
           <h2>Who am I?</h2>
