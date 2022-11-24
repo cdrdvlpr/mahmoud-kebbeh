@@ -55,8 +55,8 @@ export default function Home() {
         <div className="me">
           <Image
             src={"/me.jpg"}
-            width={150}
-            height={150}
+            width={500}
+            height={500}
             alt={"me"}
             priority={true}
           />
