@@ -13,7 +13,7 @@ export default function Home() {
         <div className="header">
           <h2>Design</h2>
           <h3>Develop &amp; Deploy</h3>
-          <p>UX designer &amp; Web Devloper, based in Aleppo.</p>
+          <p>UX designer &amp; Web Developer, based in Aleppo.</p>
           <Link href="/projects" className="btn">
             My Portfolio Projects
           </Link>
